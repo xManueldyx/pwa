@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA - Splash</title>
+  <link rel="stylesheet" href="css/splash.css">
+</head>
+<body>
+  <div id="splash">
+    <img src="images/splash.png" alt="Logo" class="logo">
+    <p>Cargando...</p>
+  </div>
+  <script>
+    function checkConnection() {
+      if (navigator.onLine) {
+        console.log("Conexión disponible. Redirigiendo a index.html...");
+        window.location.href = "offline.html";
+      } else {
+        console.log("Sin conexión. Redirigiendo a offline.html...");
+        window.location.href = "offline.html";
+      }
+    }
+
+    // Esperar 3 segundos para mostrar la animación antes de redirigir
+    setTimeout(checkConnection, 3000);
+
+    // Escucha cambios en el estado de conexión
+    window.addEventListener('offline', () => {
+      console.log("El dispositivo está sin conexión.");
+    });
+
+    window.addEventListener('online', () => {
+      console.log("El dispositivo volvió a estar en línea.");
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+

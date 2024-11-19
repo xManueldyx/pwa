@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en filas */
+    justify-content: center; /* Centra las imágenes */
+    margin-top: 20px; /* Espacio superior */
+}
+
+#gallery img {
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    margin: 10px; /* Espacio entre imágenes */
+}
+
+.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana */
+    background-color: #fff; /* Color de fondo */
+    position: fixed; /* Fijo para cubrir toda la pantalla */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+/* Estilos para el botón de notificación */
+.notification-button {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+.notification-button:hover {
+    background-color: #45a049; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+.notification-button:active {
+    transform: scale(0.95); /* Efecto de pulsación al hacer clic */
+}
